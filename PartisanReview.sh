@@ -12,6 +12,7 @@ then
     echo " "
     echo "After loading up an issue take note of its url. Open the viewer frame into a"
     echo "full window if it is embedded within another page."
+    echo " "
     echo "Provide two arguments: The first, in the URL, is the issues unique identifier"
     echo "you wish to download, for example 'PR1939V6N2' for Winter 1939. The second is"
     echo "the issue's total number of pages as seen in the viewer, for instance '128':"
@@ -26,7 +27,6 @@ else
     mkdir $1
     cd $1
     for ((i=1;i<=9;i++)); do wget -nv http://www.bu.edu/partisanreview/books/$1/HTML/files/assets/common/page-substrates/page000$i.jpg; done
-    HUNDRED=100
     if [ $2 -lt 100 ]
        then
        for ((j=10;j<=$2;j++)); do wget -nv http://www.bu.edu/partisanreview/books/$1/HTML/files/assets/common/page-substrates/page00$j.jpg; done
