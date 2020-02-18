@@ -5,7 +5,7 @@
 # https://github.com/clintonthegeek/PartisanReview/
 # Licensed under the GPL 3.0
 
-if [ $# -eq 0 ]
+if [ $# -lt 2 ]
 then
     echo "Every issue of The Partisan Review can be found online in an antiquated HTML"
     echo "viewer: http://hgar-srv3.bu.edu/web/guest/collections/partisan-review/contents"
